@@ -18,7 +18,7 @@ import com.example.goaapp.ui.main.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity implements TouristPlaces.OnFragmentInteractionListener
         ,Hotels.OnFragmentInteractionListener,Restaurants.OnFragmentInteractionListener
-        ,Markets.OnFragmentInteractionListener,Transportation.OnFragmentInteractionListener {
+        ,Markets.OnFragmentInteractionListener,Transportation.OnFragmentInteractionListener,HomeTab.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements TouristPlaces.OnF
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
 
+        tabs.addTab(tabs.newTab().setText("Home"));
         tabs.addTab(tabs.newTab().setText("Tourist Places"));
         tabs.addTab(tabs.newTab().setText("Hotels"));
         tabs.addTab(tabs.newTab().setText("Restaurants"));
