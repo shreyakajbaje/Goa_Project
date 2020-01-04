@@ -21,18 +21,21 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
+                HomeTab homeTab = new HomeTab();
+                return homeTab;
+            case 1:
                 TouristPlaces tp = new TouristPlaces();
                 return tp;
-            case 1:
+            case 2:
                 Hotels hotels = new Hotels();
                 return hotels;
-            case 2:
+            case 3:
                 Restaurants restaurants = new Restaurants();
                 return restaurants;
-            case 3:
+            case 4:
                 Markets markets = new Markets();
                 return markets;
-            case 4:
+            case 5:
                 Transportation transportation = new Transportation();
                 return transportation;
             default:
@@ -51,14 +54,16 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position){
             case 0:
-                return "Tourist Places";
+                return "Home";
             case 1:
-                return "Hotels";
+                return "Tourist Places";
             case 2:
-                return "Restaurants";
+                return "Hotels";
             case 3:
-                return "Markets";
+                return "Restaurants";
             case 4:
+                return "Markets";
+            case 5:
                 return "Transportation";
         }
         return null;
